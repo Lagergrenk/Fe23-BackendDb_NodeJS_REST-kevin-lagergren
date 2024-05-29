@@ -41,4 +41,8 @@ DB_NAME=myDatabase
 
 Starta servern genom att köra:
 
-npm start
+npm start  
+
+Nu körs projektet på localhost:3000
+
+
