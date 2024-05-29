@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Api docs</title>
+
+    <link rel="stylesheet" href="/css/tables.css" />
+  </head>
+  <body>
+    <h1>API Dokumentation</h1>
+    <p>Tryck på länk för att se exempel response</p>
+
+    <h2>Courses</h2>
+    <p>Dessa endpoints hanterar kurser. Här är några exempel:</p>
+    <table>
+      <thead>
+        <tr>
+          <th>URL</th>
+          <th>Metod</th>
+          <th>Beskrivning</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><a href="/api/courses">/api/courses</a></td>
+          <td>GET</td>
+          <td>Hämta alla courses</td>
+        </tr>
+        <tr>
+          <td><a href="/api/courses/id/4">/api/courses/id/:id</a></td>
+          <td>GET</td>
+          <td>Hämta course via id</td>
+        </tr>
+        <tr>
+          <td><a href="/api/courses/name/Webbutveckling">/api/courses/name/:name</a></td>
+          <td>GET</td>
+          <td>Hämta kurs via specifikt namn</td>
+        </tr>
+        <tr>
+          <td><a href="/api/courses/search/name?keyword=avancerad">/api/courses/search/name?keyword=:querry</a></td>
+          <td>GET</td>
+          <td>Sök efter ord i kursnamn</td>
+        </tr>
+
+        <tr>
+          <td>
+            <a href="/api/courses/search/description?keyword=Introduktion"
+              >/api/courses/search/description?keyword=:querry</a
+            >
+          </td>
+          <td>GET</td>
+          <td>Sök efter ord i kursbeskrivning</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>Students</h2>
+    <p>Dessa endpoints hanterar studenter. Här är några exempel:</p>
+    <table>
+      <thead>
+        <tr>
+          <th>URL</th>
+          <th>Metod</th>
+          <th>Beskrivning</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><a href="/api/students">/api/students</a></td>
+          <td>GET</td>
+          <td>Hämta alla students</td>
+        </tr>
+        <tr>
+          <td><a href="/api/students/id/4">/api/students/id/:id</a></td>
+          <td>GET</td>
+          <td>Hämta student via id</td>
+        </tr>
+        <tr>
+          <td><a href="/api/students/search?keyWord=kevin">/api/students/search?keyWord=:query</a></td>
+          <td>GET</td>
+          <td>Sök efter student</td>
+        </tr>
+        <tr>
+          <td><a href="/api/students/name/kevin">/api/students/name/:querry</a></td>
+          <td>GET</td>
+          <td>Sök efter student via namn både för- och efternamn</td>
+        </tr>
+        <tr>
+          <td><a href="/api/students/town/malmö">/api/students/town/:querry</a></td>
+          <td>GET</td>
+          <td>Sök efter student via stad</td>
+        </tr>
+        <tr>
+          <td>/api/students</td>
+          <td>POST</td>
+          <td>Lägg till student</td>
+        </tr>
+        <tr>
+          <td>/api/students/:id</td>
+          <td>PUT</td>
+          <td>Uppdatera student</td>
+        </tr>
+        <tr>
+          <td>/api/students/:id</td>
+          <td>DELETE</td>
+          <td>Ta bort student</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>Students-Courses</h2>
+    <p>Dessa endpoints hanterar relationer mellan studenter och kurser. Här är några exempel:</p>
+    <table>
+      <thead>
+        <tr>
+          <th>URL</th>
+          <th>Metod</th>
+          <th>Beskrivning</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><a href="/api/students-courses">/api/students-courses</a></td>
+          <td>GET</td>
+          <td>Hämta alla student-kurs relationer</td>
+        </tr>
+        <tr>
+          <td><a href="/api/courses/id/1/students">/api/courses/id/:id/students</a></td>
+          <td>GET</td>
+          <td>Hämta relationer för specifik kurs via id</td>
+        </tr>
+        <tr>
+          <td><a href="/api/courses/name/Webbutveckling/students">/api/courses/name/:querry/students</a></td>
+          <td>GET</td>
+          <td>Hämta relationer för specifik kurs via namn</td>
+        </tr>
+        <tr>
+          <td><a href="/api/students/kevin/courses">/api/students/:name/courses</a></td>
+          <td>GET</td>
+          <td>Hämta relationer för specifik student via name, både förnamn och efternamn</td>
+        </tr>
+        <tr>
+          <td><a href="/api/students/id/1/courses">/api/students/id/:id/courses</a></td>
+          <td>GET</td>
+          <td>Hämta relationer för specifik student via id</td>
+        </tr>
+        <tr>
+          <td><a href="/api/students/town/malmö/courses">/api/students/town/:querry/courses</a></td>
+          <td>GET</td>
+          <td>Hämta alla studenter från en stad och deras kurser</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <a href="/">Tillbaka</a>
+  </body>
+</html>

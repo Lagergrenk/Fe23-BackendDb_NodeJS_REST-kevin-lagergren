@@ -1,0 +1,26 @@
+:root {
+  --font-family: Arial, sans-serif;
+  --background-color: #f4f4f4;
+  --primary-color: #007bff;
+  --text-color-dark: #333;
+  --text-color-medium: #555;
+  --container-bg-color: white;
+  --container-padding: 20px;
+  --container-border-radius: 8px;
+  --container-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  --input-border: 1px solid #ddd;
+  --input-padding: 10px;
+  --button-bg-color: #007bff;
+  --button-text-color: white;
+  --button-border: none;
+  --button-padding: 10px 20px;
+  --button-border-radius: 5px;
+  --button-hover-bg-color: #0056b3;
+  --link-hover-decoration: underline;
+  --table-border-color: #ddd;
+  --table-padding: 10px;
+  --table-bg-color-alt: #f9f9f9;
+  --mobile-container-width: 90%;
+  --mobile-container-padding: 10px;
+  --mobile-card-margin: 10px 0;
+}

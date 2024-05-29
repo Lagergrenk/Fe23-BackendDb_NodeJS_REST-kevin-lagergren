@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Courses</title>
+    <link rel="stylesheet" href="/css/tables.css" />
+  </head>
+  <body>
+    <h1>Kurser</h1>
+
+    <form action="/courses/search/name" method="GET">
+      <input type="text" name="keyword" placeholder="Sök Kursnamn" required />
+      <button type="submit">Sök</button>
+    </form>
+
+    <form action="/courses/search/description" method="GET">
+      <input type="text" name="keyword" placeholder="Sök Beskrivning" required />
+      <button type="submit">Sök</button>
+    </form>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Kurs</th>
+          <th>Beskrivning</th>
+          <th>Välj</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% courses.forEach(course => { %>
+        <tr>
+          <td><%= course.name %></td>
+          <td><%= course.description %></td>
+          <td>
+            <a href="/courses/<%= course.id %>/edit">Redigera</a>
+            <form action="/courses/<%= course.id %>?_method=DELETE" method="POST">
+              <button type="submit">Ta bort</button>
+            </form>
+          </td>
+        </tr>
+        <% }) %>
+      </tbody>
+    </table>
+
+    <a href="/">Tillbaka</a>
+    <a href="/courses/new">Lägg till ny kurs</a>
+  </body>
+</html>

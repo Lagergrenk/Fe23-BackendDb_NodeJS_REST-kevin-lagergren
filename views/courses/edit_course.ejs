@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Redigera kurs</title>
+    <link rel="stylesheet" href="/css/tables.css" />
+  </head>
+  <body>
+    <h1>Redigera Kurs</h1>
+    <form action="/courses/<%= course.id %>?_method=PUT" method="POST">
+      <label for="name">Kurs namn:</label>
+      <input type="text" id="name" name="name" value="<%= course.name %>" required />
+      <label for="description">Description:</label>
+      <textarea id="description" name="description" required><%= course.description %></textarea>
+      <button type="submit">Updatera kurs</button>
+    </form>
+    <a href="/courses">Tillbaka till kurser</a>
+    <a href="/">Hem</a>
+  </body>
+</html>

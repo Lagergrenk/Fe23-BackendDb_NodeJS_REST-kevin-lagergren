@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Profil | Kevin Lagergren</title>
+    <link rel="stylesheet" href="/css/profil.css" />
+  </head>
+  <body>
+    <h1>Student Profil</h1>
+    <p>Förnamn: <%= student.fName %></p>
+    <p>Efternamn: <%= student.lName %></p>
+    <p>Stad: <%= student.town %></p>
+
+    <h2>Kurser</h2>
+    <ul>
+      <% student.courses.forEach(course => { %>
+      <li><%= course.name %></li>
+      <% }) %>
+    </ul>
+
+    <a href="/students/<%= student.id %>/edit">Redigera</a>
+    <a href="/students">Tillbaka</a>
+  </body>
+</html>

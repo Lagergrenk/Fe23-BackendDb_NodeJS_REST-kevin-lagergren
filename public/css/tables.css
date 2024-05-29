@@ -1,0 +1,112 @@
+@import url('variables.css');
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--background-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+h1 {
+  color: var(--text-color-dark);
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+input[type='text'] {
+  padding: var(--input-padding);
+  border: var(--input-border);
+  border-radius: var(--container-border-radius);
+  margin-right: 10px;
+}
+
+button {
+  background-color: var(--button-bg-color);
+  color: var(--button-text-color);
+  border: var(--button-border);
+  padding: var(--button-padding);
+  border-radius: var(--button-border-radius);
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--button-hover-bg-color);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+thead th {
+  background-color: var(--primary-color);
+  color: var(--button-text-color);
+  padding: var(--table-padding);
+}
+
+tbody td {
+  padding: var(--table-padding);
+  border-bottom: var(--input-border);
+}
+
+tbody tr:nth-child(even) {
+  background-color: var(--table-bg-color-alt);
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+a:hover {
+  text-decoration: var(--link-hover-decoration);
+}
+
+form {
+  display: inline;
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 10px;
+  }
+
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    display: block;
+  }
+
+  thead tr {
+    display: none;
+  }
+
+  tbody td {
+    position: relative;
+    padding-left: 50%;
+    text-align: right;
+  }
+
+  tbody td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 0;
+    width: 50%;
+    padding-left: 10px;
+    font-weight: bold;
+    text-align: left;
+  }
+}

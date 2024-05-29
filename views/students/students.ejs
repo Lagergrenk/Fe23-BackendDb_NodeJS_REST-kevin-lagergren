@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Students</title>
+
+    <link rel="stylesheet" href="/css//tables.css" />
+  </head>
+  <body>
+    <h1>Students</h1>
+    <form action="/students/search" method="GET">
+      <input type="text" name="keyWord" placeholder="Sök efter student" required />
+      <button type="submit">Sök</button>
+    </form>
+    <table>
+      <thead>
+        <tr>
+          <th>Förnamn</th>
+          <th>Efternamn</th>
+          <th>Stad</th>
+          <th>Välj</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% students.forEach(student => { %>
+        <tr>
+          <td data-label="Förnamn"><%= student.fName %></td>
+          <td data-label="Efternamn"><%= student.lName %></td>
+          <td data-label="Stad"><%= student.town %></td>
+          <td data-label="Välj">
+            <a href="/students/<%= student.id %>">Profil</a>
+            <form action="/students/<%= student.id %>?_method=DELETE" method="POST">
+              <button type="submit">Ta bort</button>
+            </form>
+          </td>
+        </tr>
+        <% }) %>
+      </tbody>
+    </table>
+    <a href="/students/new">Lägg till ny student</a>
+    <a href="/">Tillbaka</a>
+  </body>
+</html>

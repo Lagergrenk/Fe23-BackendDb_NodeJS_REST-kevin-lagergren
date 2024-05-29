@@ -1,0 +1,70 @@
+@import url('variables.css');
+
+/* Global styling */
+body {
+  font-family: var(--font-family);
+  background-color: var(--background-color);
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  text-align: center;
+  background: var(--container-bg-color);
+  padding: var(--container-padding);
+  border-radius: var(--container-border-radius);
+  box-shadow: var(--container-box-shadow);
+  max-width: 800px;
+  width: 100%;
+}
+
+h1 {
+  color: var(--text-color-dark);
+  margin-bottom: 20px;
+}
+
+.card {
+  background: var(--card-bg-color);
+  border: var(--card-border);
+  border-radius: var(--card-border-radius);
+  padding: var(--card-padding);
+  margin: var(--card-margin);
+  box-shadow: var(--card-box-shadow);
+}
+
+h2 {
+  color: var(--text-color-medium);
+  margin-bottom: 10px;
+}
+
+a {
+  display: block;
+  color: var(--primary-color);
+  text-decoration: none;
+  margin: 10px 0;
+  padding: 10px;
+  border: var(--input-border);
+  border-radius: var(--container-border-radius);
+  background: var(--container-bg-color);
+  transition: background 0.3s;
+}
+
+a:hover {
+  text-decoration: var(--link-hover-decoration);
+  background: var(--background-color);
+}
+
+@media (max-width: 600px) {
+  .container {
+    width: var(--mobile-container-width);
+    padding: var(--mobile-container-padding);
+  }
+
+  .card {
+    margin: var(--mobile-card-margin);
+  }
+}

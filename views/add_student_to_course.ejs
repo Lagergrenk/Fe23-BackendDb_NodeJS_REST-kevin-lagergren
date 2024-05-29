@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lägg till student till kurs</title>
+    <link rel="stylesheet" href="/css/tables.css" />
+  </head>
+  <body>
+    <h1>Lägg till student till kurs</h1>
+    <form action="/students-courses" method="POST">
+      <label for="student">Student</label>
+      <select name="student" id="student">
+        <% students.forEach(student => { %>
+        <option value="<%= student.id %>"><%= student.fName %> <%= student.lName %></option>
+        <% }) %>
+      </select>
+      <label for="course">Kurs</label>
+      <select name="course" id="course">
+        <% courses.forEach(course => { %>
+        <option value="<%= course.id %>"><%= course.name %></option>
+        <% }) %>
+      </select>
+      <button type="submit">Lägg till student till kurs</button>
+    </form>
+    <a href="/students-courses">Tillbaka till studentkurser</a>
+    <a href="/">Hem</a>
+  </body>
+</html>

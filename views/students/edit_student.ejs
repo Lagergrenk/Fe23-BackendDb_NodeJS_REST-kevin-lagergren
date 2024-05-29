@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edit Student</title>
+
+    <link rel="stylesheet" href="/css/tables.css" />
+  </head>
+  <body>
+    <h1>Edit Student</h1>
+    <form action="/students/<%= student.id %>?_method=PUT" method="POST">
+      <label for="fName">Förnamn:</label>
+      <input type="text" id="fName" name="fName" value="<%= student.fName %>" required />
+      <label for="lName">Efternamn:</label>
+      <input type="text" id="lName" name="lName" value="<%= student.lName %>" required />
+      <label for="town">Stad:</label>
+      <input type="text" id="town" name="town" value="<%= student.town %>" />
+      <button type="submit">Updatera Student</button>
+    </form>
+    <a href="/students">Tillbaka till studenter</a>
+    <a href="/">Hem</a>
+  </body>
+</html>

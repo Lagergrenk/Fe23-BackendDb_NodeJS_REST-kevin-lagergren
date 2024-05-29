@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lägg till ny kurs</title>
+  </head>
+  <body>
+    <h1>Lägg till ny kurs</h1>
+    <form action="/courses" method="POST">
+      <label for="name">Kurs Namn:</label>
+      <input type="text" id="name" name="name" required />
+      <label for="description">Beskrivning:</label>
+      <textarea id="description" name="description"></textarea>
+      <button type="submit">Lägg till</button>
+    </form>
+    <a href="/courses">Tillbaka till kurser</a>
+    <a href="/">Hem</a>
+  </body>
+</html>
