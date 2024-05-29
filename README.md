@@ -32,10 +32,10 @@ npm install
 **Konfigurera Miljövariabler**
 Skapa en `.env`-fil i projektroten och konfigurera dina databasinställningar:
 
-DB_HOST=localhost
-DB_USER=myUser
-DB_PASS=myPassword
-DB_NAME=myDatabase
+DB_HOST=localhost  
+DB_USER=myUser  
+DB_PASS=myPassword  
+DB_NAME=myDatabase  
 
 ## Kör Projektet
 
